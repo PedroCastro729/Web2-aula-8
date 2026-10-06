@@ -17,7 +17,7 @@ while($resultado = $stm->fetch(PDO::FETCH_ASSOC)) {
 
     if($resultado['nome'] != NULL && $resultado['email'] != NULL)
         {
-            $_SESSION = $resultado['nome'];
+            $_SESSION['nome'] = $resultado['nome'];
             echo "Sessão salva";
         } else {
             echo "Erro ao procurar os dados!";
